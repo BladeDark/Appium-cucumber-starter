@@ -15,7 +15,7 @@ import pageObjects.*;
 
 public class Steps{
 	
-	private static AndroidDriver<AndroidElement> driver;
+	private static RemoteWebDriver driver;
 	private Landing_Page Landing_Page ;
 	private Preference_Page Preference_Page;
 	
