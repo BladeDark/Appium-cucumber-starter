@@ -6,6 +6,8 @@ import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.cucumber.listener.Reporter;
+
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import io.appium.java_client.android.AndroidDriver;
@@ -44,6 +46,7 @@ public class Steps{
 	public void i_click_preference_dependencies() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Preference_Page.btn_preference_dependencies.click();
+		Reporter.addStepLog("Step Log message goes here");
 	}
 
 
