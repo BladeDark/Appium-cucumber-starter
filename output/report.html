@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 11, 2018 12:37:02 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 15, 2018 04:11:26 PM</span>
 				</a>
 			</li>
 			<li>
@@ -158,7 +158,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -177,32 +177,40 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Automated End2End Mobile Testing</span>
-						<span class='test-time'>May 11, 2018 12:37:02 PM</span>
+						<span class='test-name'>Automated End2End Mobile Testing on N2MU App</span>
+						<span class='test-time'>May 15, 2018 04:11:26 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 10s+894ms</span>
+	<span class='duration right label'>0h 0m 44s+56ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">Customer</span>
+		<span class="desc-text">Register new man user</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node given pass' status='pass'>
 			
 			<b>Given</b>
 			
-			<span class="bdd-step-name">Given I click preference</span>
+			<span class="bdd-step-name">Given I click register</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='4' class='node given pass' status='pass'>
+		<li test-id='4' class='node when pass' status='pass'>
 			
-			<b>Given</b>
+			<b>When</b>
 			
-			<span class="bdd-step-name">Given I click preference dependencies</span>
-				<div class='pre'>Step Log message goes here</div>
+			<span class="bdd-step-name">When I click user image</span>
+				<div class='pre'>Test fill value in report step</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I fill all required information</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -257,25 +265,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 11, 2018 12:37:02 PM</div>
+					<div class='panel-lead'>May 15, 2018 04:11:26 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 11, 2018 12:37:13 PM</div>
+			 		<div class='panel-lead'>May 15, 2018 04:12:10 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>11,060ms</div>
+					<div class='panel-lead'>44,260ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -334,7 +342,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 2,
+				passGrandChild: 3,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
