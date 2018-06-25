@@ -13,15 +13,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/functionalTests",
 		glue= {"stepDefinitions"},
-		plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
+		format = {"json:target/cucumber.json"},
+		//tags = "@Fourth",
+		monochrome = true
 		)
 public class TestRunner {
-	
-	 @AfterClass
-	    public static void teardown() {
-	        Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
-	        Reporter.setSystemInfo("user", System.getProperty("user.name"));
-	        Reporter.setSystemInfo("os", "Android");
-	        Reporter.setTestRunnerOutput("Sample test runner output message");
-	    }
+
 }

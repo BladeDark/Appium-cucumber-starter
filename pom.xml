@@ -12,6 +12,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<browser>android</browser>
+		<implicitlyWait>10</implicitlyWait>
+		<url>https://ecom-staging-dat.worldticket.net</url>
+		<explicitWait>30</explicitWait>
+		<environment>remote</environment>
+		<buildnumber>No build</buildnumber>
 	</properties>
 
 	<dependencies>
@@ -23,11 +29,18 @@
 			<version>3.12.0</version>
 		</dependency>
 
-		
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>1.2.5</version>
+			<scope>test</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
-			<version>6.0.0-BETA5</version>
+			<version>6.1.0</version>
 		</dependency>
 
 
@@ -91,7 +104,46 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>3.17.1</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>ECOM-Automation</projectName>
+							<buildNumber>${buildnumber}</buildNumber>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<jsonFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>**/*.json</param>
+							</jsonFiles>
+							<classificationFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>classes/other.properties</param>
+							</classificationFiles>
+							<parallelTesting>false</parallelTesting>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
+
+
+
+
+		<resources>
+			<resource>
+				<directory>configs</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 	</build>
 
 </project>
