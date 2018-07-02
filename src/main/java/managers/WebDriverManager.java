@@ -96,8 +96,10 @@ public class WebDriverManager {
 			androidCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 			androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
 			androidCapabilities.setCapability("appPackage", "com.ekoapp.ekos.debug");
-			androidCapabilities.setCapability("unicodeKeyboard", true);
-			androidCapabilities.setCapability("resetKeyboard", true);
+			//androidCapabilities.setCapability("unicodeKeyboard", true);
+			//androidCapabilities.setCapability("resetKeyboard", true);
+			androidCapabilities.setCapability("noReset","false");
+			androidCapabilities.setCapability("fullReset","false");
 			//androidCapabilities.setCapability("connectHardwareKeyboard", false);
 			androidCapabilities.setCapability("appActivity", "com.ekoapp.Home.HomeActivity2");
 			androidCapabilities.setCapability(MobileCapabilityType.APP, appAndroid.getAbsolutePath());

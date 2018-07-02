@@ -1,3 +1,5 @@
+
+
 package runners;
 
 import java.io.File;
@@ -14,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources/functionalTests",
 		glue= {"stepDefinitions"},
 		format = {"json:target/cucumber.json"},
-		//tags = "@Fourth",
+		tags = "@First",
 		monochrome = true
 		)
 public class TestRunner {

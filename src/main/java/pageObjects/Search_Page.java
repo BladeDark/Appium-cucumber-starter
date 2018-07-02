@@ -40,7 +40,7 @@ public class Search_Page {
 	}
 	
 	public void click_back(){
-		wait.until(ExpectedConditions.visibilityOf(btn_back));
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(btn_back)));
 		btn_back.click();
 	}
 	
